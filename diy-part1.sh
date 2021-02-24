@@ -30,7 +30,7 @@ git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app
 # Clash插件
 git clone https://github.com/frainzy1477/luci-app-clash package/luci-app-clash
 #PassWall插件
-git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
+#git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 # SmartDNS插件
 git clone https://github.com/pymumu/openwrt-smartdns package/openwrt-smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
@@ -46,3 +46,5 @@ git clone -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-s
 #popd
 # Edge主题
 #git clone -b 18.06 https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
+sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
